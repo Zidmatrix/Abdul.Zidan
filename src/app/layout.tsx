@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './additions.css';
 export const metadata: Metadata = {
  metadataBase: new URL('https://zidmatrix.github.io'),
  title:'The Zidan Edit — Abdulrahman Zidan / Sales & Lead Management',

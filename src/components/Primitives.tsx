@@ -1,6 +1,5 @@
 'use client';
 import {useEffect,type ReactNode,type MouseEvent} from 'react';
-import {asset} from '@/lib/content';
 export function Arrow({diagonal=false}:{diagonal?:boolean}){return <span aria-hidden="true" className="arrow">{diagonal?'↗':'→'}</span>;}
 export function Label({number,children}:{number:string;children:ReactNode}){return <div className="section-label"><span>{number}</span><span>{children}</span><span className="label-rule"/></div>;}
 export function Magnetic({children,className='',...props}:{children:ReactNode;className?:string;href?:string;onClick?:()=>void}){
@@ -8,7 +7,7 @@ export function Magnetic({children,className='',...props}:{children:ReactNode;cl
  const reset=(e:MouseEvent<HTMLElement>)=>{e.currentTarget.style.setProperty('--mx','0px');e.currentTarget.style.setProperty('--my','0px');};
  return props.href?<a {...props} className={`magnetic ${className}`} onMouseMove={move} onMouseLeave={reset}>{children}</a>:<button {...props} className={`magnetic ${className}`} onMouseMove={move} onMouseLeave={reset}>{children}</button>;
 }
-export function CvLink({className=''}:{className?:string}){return <a className={className} href={asset('Abdulrahman-Zidan-CV.pdf')} target="_blank" rel="noreferrer">VIEW CV <Arrow diagonal/></a>;}
+export function CvLink({className=''}:{className?:string}){return <a className={className} href="#cv">VIEW CV <Arrow diagonal/></a>;}
 export function useDialog(open:boolean,ref:React.RefObject<HTMLDialogElement|null>,close:()=>void){
  useEffect(()=>{
   const dialog=ref.current;if(!dialog)return;

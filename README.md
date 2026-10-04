@@ -26,4 +26,10 @@ GitHub Pages uses GitHub Actions. Main pushes run the workflow in `.github/workf
 Portrait fallback, source/video error handling, fullscreen error message, keyboard service tabs, native dialog focus containment and Escape handling, native scroll, reduced motion and touch controls. No server, API, contact-form simulation or external video hosting.
 
 ## Live verification
-See `QA.md` for the production checks. Desktop, phone and tablet layouts, chapter navigation, keyboard service selection, method/company/tool indices, command search, native in-page video playback, CV new-tab behavior and reduced-motion control were checked on GitHub Pages. No manual asset uploads remain.
+See `QA.md` for the production checks. Desktop, phone and tablet layouts, chapter navigation, keyboard service selection, method/company/tool indices, command search, native in-page video playback, embedded CV behavior and reduced-motion control were checked on GitHub Pages. No manual asset uploads remain.
+
+## Markets and CV update
+
+Eight state markets use a keyboard-accessible static SVG world map, centered on the U.S. by default, with selectable pins and U.S./world views. Mobile uses an interactive state list. Coordinates are separate in `src/lib/markets.ts`; public-domain Natural Earth geometry is bundled locally. No API key or external map requests.
+
+The original two-page CV is rendered faithfully in a framed in-site reader with pagination, zoom, accessible extracted text, and an optional original-PDF download. All VIEW CV links navigate to this section. PDF bytes are unchanged. The LinkedIn URL and more-than-two-years direct-client/company experience follow the user's latest supplied information.
