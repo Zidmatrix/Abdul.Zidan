@@ -28,7 +28,7 @@ export default function Portfolio(){
   window.addEventListener('scroll',scroll,{passive:true});window.addEventListener('keydown',key);window.addEventListener('pointermove',pointer,{passive:true});update();
   return ()=>{observer.disconnect();cancelAnimationFrame(frame);media.removeEventListener('change',motionChange);window.removeEventListener('scroll',scroll);window.removeEventListener('keydown',key);window.removeEventListener('pointermove',pointer);};
  },[]);
- useEffect(()=>{if(film){setMediaError(false);setFullscreenNote('');}else video.current?.pause();},[film]);
+ useEffect(()=>{if(cursor.current)cursor.current.dataset.visible='false';if(film){setMediaError(false);setFullscreenNote('');}else video.current?.pause();},[film]);
  const go=(id:string)=>{setMenu(false);setCommand(false);location.hash=id;};
  const openFilm=()=>{setFilm(true);go('introduction');};
  const closeFilm=()=>{restoreFilmFocus.current=true;setFilm(false);};

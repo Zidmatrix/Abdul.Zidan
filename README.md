@@ -24,3 +24,6 @@ GitHub Pages uses GitHub Actions. Main pushes run the workflow in `.github/workf
 
 ## Resilience
 Portrait fallback, source/video error handling, fullscreen error message, keyboard service tabs, native dialog focus containment and Escape handling, native scroll, reduced motion and touch controls. No server, API, contact-form simulation or external video hosting.
+
+## Live verification
+See `QA.md` for the production checks. Desktop, phone and tablet layouts, chapter navigation, keyboard service selection, method/company/tool indices, command search, native in-page video playback, CV new-tab behavior and reduced-motion control were checked on GitHub Pages. No manual asset uploads remain.
